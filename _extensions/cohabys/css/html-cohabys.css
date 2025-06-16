@@ -1,0 +1,146 @@
+/* Importing fonts */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+.title {
+  color: #00a7e1;
+  /* accent blue */
+  font-family: "Raleway";
+  font-weight: bold;
+}
+
+body {
+  font-family: 'Atkinson Hyperlegible';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-align: left;
+  color: #0d2c5a;
+  /* primary dark blue */
+  font-family: "Raleway";
+  font-weight: bold;
+}
+
+.header-section-number {
+  color: #00a7e1;
+  /* accent blue */
+}
+
+/* Websites / navbar */
+.navbar {
+  border: 0px solid #0d2c5a;
+  border-bottom: 5px solid #0d2c5a;
+  background-color: #00a7e1;
+  /* light blue */
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+  color: #ffffff;
+  background-color: #0d2c5a;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+  color: #ffffff;
+  background-color: #0d2c5a;
+}
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+  color: #ffffff;
+  background-color: #0d2c5a;
+}
+
+/* Books / sidebar */
+#quarto-sidebar,
+#quarto-content .sidebar-navigation {
+  border: none !important;
+  color: #FFFFFF;
+  background-color: #007ab6;
+  /* medium blue */
+
+  code {
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+  }
+
+  .sidebar-item-container {
+
+    a,
+    .chapter-number {
+      color: #FFFFFF;
+    }
+
+    a.active,
+    a:hover {
+      color: #a3dfff;
+      /* soft background blue */
+    }
+  }
+
+  .sidebar-item-section>.sidebar-item-container:first-child a,
+  .sidebar-item-section>.sidebar-item-container:first-child a.active,
+  .sidebar-item-section>.sidebar-item-container:first-child a:hover {
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: transparent;
+  }
+}
+
+#quarto-header .quarto-secondary-nav-title {
+  text-align: center;
+}
+
+.book .book-body .page-wrapper .page-inner {
+  margin: auto;
+  width: 100%;
+  max-width: 1000px;
+}
+
+a.anchor-section::before {
+  color: #0d2c5a;
+  text-decoration-color: #0d2c5a;
+}
+
+a {
+  color: #007ab6;
+  /* medium blue links */
+}
+
+.book-summary ul.summary li.active>a {
+  color: #a3dfff !important;
+  background: 0 0;
+  text-decoration: none;
+}
+
+div.sidebar-item-container .active,
+div.sidebar-item-container .show>.nav-link,
+div.sidebar-item-container .sidebar-link>code {
+  color: #00a7e1;
+  /* light blue */
+  font-weight: bold;
+}
+
+.sidebar-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.sidebar nav[role="doc-toc"] ul>li>a.active {
+  border-left: 1px solid #00a7e1;
+  color: #00a7e1 !important;
+}
+
+.sidebar nav[role="doc-toc"] ul>li>ul>li>a.active {
+  border-left: 1px solid #00a7e1;
+  color: #00a7e1 !important;
+}

@@ -1,0 +1,159 @@
+<style>
+  :root {
+    --primary-color: $primary-color$;
+  }
+
+  .title-block-content {
+    position: relative;
+    padding-top: 130px;
+    padding-bottom: 130px;
+    max-width: 752px;
+    margin: auto;
+  }
+
+  .header-keyword {
+    color: rgb(59, 59, 59);
+    opacity: 0.5;
+    font-size: 14;
+  }
+
+  .octocat-container {
+    fill: var(--primary-color);
+    color: #fff;
+    position: absolute;
+    top: 0;
+    border: 0;
+    right: 0;
+  }
+
+  #particles-js {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .bg-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+
+<header id="title-block-header" style="position: relative">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- This is the div in which the background image will be included -->
+  $if(bg-image)$
+  <img src="$bg-image$" alt="background image used for decoration" class="bg-image" style="opacity: 0.3" />
+  $endif$
+
+  <!-- This is the div in which the particles will be included -->
+  $if(is-particlejs-enabled)$
+  <div id="particles-js"></div>
+  $endif$
+
+  <!-- Actual content on top of the particles-->
+  <div class="title-block-content">
+    <!-- Logo -->
+    $if(logo)$
+    <img src="$logo$" alt="logo of company" height="140px" style="margin-bottom: 20px" />
+    $endif$
+
+    <!-- Title -->
+    $if(title)$
+    <h1 class="title">$title$</h1>
+    $endif$
+
+    <hr />
+
+    <!-- Subtitle -->
+    $if(subtitle)$
+    <p class="subtitle">$subtitle$</p>
+    $endif$
+
+    <!-- Author -->
+    $for(author)$
+    <p class="author"><span class="header-keyword">Author: </span>$author$</p>
+    $endfor$
+
+    <!-- Date -->
+    $if(date)$
+    <p style="margin-top: 0px">
+      <span class="header-keyword">Date: </span>$date$
+    </p>
+    $endif$
+
+    <!-- Particle.js script loaded from a CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- use the particle js library with our own config (json file). -->
+    <script>
+      particlesJS.load(
+        "particles-js",
+        "https://raw.githubusercontent.com/holtzy/lumo/refs/heads/main/orgs/exploristics/_extensions/lumo/particles.json"
+      );
+    </script>
+  </div>
+</header>
+
+<!------------------------- Code for the octocat (github Mascot) that will be included if a link to the github repo is provided. ------------------->
+
+
+$if(github-repo)$
+<a href="$github-repo$" class="github-corner" aria-label="View source on GitHub">
+  <svg width="80" height="80" viewBox="0 0 250 250" class="octocat-container" aria-hidden="true">
+
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+
+    <!-- Whale scaled and centered -->
+    <path class="whale" fill="currentColor" d="M509.642,108.223c-28.004,10.505-52.511,7.001-77.004,38.502c-24.507-31.501-49-27.997-77.004-38.502
+           c-15.743,83.998,52.497,105.001,52.497,105.001l-23.845,42.597c-9.412,11.598-23.126,18.88-38.006,20.175
+           c-14.88,1.295-29.659-3.511-40.927-13.296l-59.074-56.951c-33.429-29.034-76.213-45.022-120.492-45.022H90.747
+           C50.166,160.727,0,196.373,0,256.324v71.298c0,42.128,27.558,76.155,81.019,76.155h171.752h80.602
+           c37.459,0,71.176-22.752,85.192-57.49l38.567-133.063C457.131,213.224,525.386,192.221,509.642,108.223z"
+      fill="#2b3a42"></path>
+
+  </svg>
+</a>
+<style>
+  .whale {
+    transition: transform 0.3s ease;
+    transform: translate(160px, 18px) scale(0.25) rotate(45deg);
+  }
+
+  .github-corner:hover .whale {
+    animation: wiggle 560ms ease-in-out;
+  }
+
+  @keyframes wiggle {
+
+    0%,
+    100% {
+      transform: translate(160px, 18px) scale(0.25) rotate(45deg);
+    }
+
+    25% {
+      transform: translate(160px, 18px) scale(0.25) rotate(46deg);
+    }
+
+    75% {
+      transform: translate(160px, 18px) scale(0.25) rotate(44deg);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .github-corner:hover .whale {
+      animation: none;
+    }
+
+    .github-corner .whale {
+      animation: wiggle 560ms ease-in-out;
+    }
+  }
+</style>
+$endif$
