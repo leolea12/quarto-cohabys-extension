@@ -13,7 +13,7 @@ date: today
 date-format: long
 format: cohabys-html
 github-repo: "https://github.com/leolea12/quarto-cohabys-extension"       
-bg-image: _extensions/leolea12/cohabys/Images/background-html.jpg
+bg-image: _extensions/cohabys/Images/background-html.jpg
 execute: 
   warning: false
 ---
