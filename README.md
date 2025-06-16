@@ -1,12 +1,3 @@
----
-title: "README"
-output: 
-  github_document:
-    toc: true
-    toc_depth: 2
-    html_preview: false
----
-
 # My Custom Quarto Extension (Based on INRAE Templates)
 
 This Quarto extension is a customized fork of the excellent [quarto-inrae-extension](https://github.com/davidcarayon/quarto-inrae-extension) originally developed by [@davidcarayon](https://github.com/davidcarayon). It was adapted to better suit my specific needs while retaining the spirit and structure of the original templates provided for INRAE engineers and researchers.
